@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B41245828C719210061F7D7 /* UIWindow + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B41245728C719210061F7D7 /* UIWindow + Extension.swift */; };
+		3B41245B28C7336F0061F7D7 /* TextFieldValidatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B41245A28C7336F0061F7D7 /* TextFieldValidatable.swift */; };
 		3BFC6F5028C65E8E00B65343 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFC6F4F28C65E8E00B65343 /* AppDelegate.swift */; };
 		3BFC6F5228C65E8E00B65343 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFC6F5128C65E8E00B65343 /* SceneDelegate.swift */; };
 		3BFC6F8D28C65F5900B65343 /* DateConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFC6F8028C65F5900B65343 /* DateConversionTests.swift */; };
@@ -17,6 +19,8 @@
 		3BFC6F9228C65F5900B65343 /* AddTransactionMaxValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFC6F8828C65F5900B65343 /* AddTransactionMaxValidationTests.swift */; };
 		3BFC6F9328C65F5900B65343 /* TransactionsTotalHVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFC6F8A28C65F5900B65343 /* TransactionsTotalHVM.swift */; };
 		3BFC6F9428C65F5900B65343 /* TransactionsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFC6F8C28C65F5900B65343 /* TransactionsListViewModelTests.swift */; };
+		3BFC6FD528C65F6900B65343 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BFC6F9728C65F6800B65343 /* LaunchScreen.storyboard */; };
+		3BFC6FD628C65F6900B65343 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BFC6F9928C65F6800B65343 /* Main.storyboard */; };
 		3BFC6FD728C65F6900B65343 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFC6F9D28C65F6800B65343 /* UIView + Extension.swift */; };
 		3BFC6FD828C65F6900B65343 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFC6F9E28C65F6800B65343 /* UIViewController + Extension.swift */; };
 		3BFC6FD928C65F6900B65343 /* Date + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFC6F9F28C65F6800B65343 /* Date + Extension.swift */; };
@@ -47,8 +51,6 @@
 		3BFC6FF228C65F6900B65343 /* TransactionsCoreDataServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFC6FD128C65F6900B65343 /* TransactionsCoreDataServiceManager.swift */; };
 		3BFC6FF328C65F6900B65343 /* TransactionsListCoreDataServiceWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFC6FD228C65F6900B65343 /* TransactionsListCoreDataServiceWorker.swift */; };
 		3BFC6FF428C65F6900B65343 /* AddTransactionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFC6FD428C65F6900B65343 /* AddTransactionCoordinator.swift */; };
-		3BFC6FFA28C6618F00B65343 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BFC6FF628C6618F00B65343 /* LaunchScreen.storyboard */; };
-		3BFC6FFB28C6618F00B65343 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BFC6FF828C6618F00B65343 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B41245728C719210061F7D7 /* UIWindow + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow + Extension.swift"; sourceTree = "<group>"; };
+		3B41245A28C7336F0061F7D7 /* TextFieldValidatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidatable.swift; sourceTree = "<group>"; };
 		3BFC6F4C28C65E8E00B65343 /* Expense Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Expense Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BFC6F4F28C65E8E00B65343 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BFC6F5128C65E8E00B65343 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 		3BFC6F8828C65F5900B65343 /* AddTransactionMaxValidationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTransactionMaxValidationTests.swift; sourceTree = "<group>"; };
 		3BFC6F8A28C65F5900B65343 /* TransactionsTotalHVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsTotalHVM.swift; sourceTree = "<group>"; };
 		3BFC6F8C28C65F5900B65343 /* TransactionsListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsListViewModelTests.swift; sourceTree = "<group>"; };
+		3BFC6F9828C65F6800B65343 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3BFC6F9A28C65F6800B65343 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3BFC6F9D28C65F6800B65343 /* UIView + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		3BFC6F9E28C65F6800B65343 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		3BFC6F9F28C65F6800B65343 /* Date + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date + Extension.swift"; sourceTree = "<group>"; };
@@ -105,8 +111,6 @@
 		3BFC6FD128C65F6900B65343 /* TransactionsCoreDataServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsCoreDataServiceManager.swift; sourceTree = "<group>"; };
 		3BFC6FD228C65F6900B65343 /* TransactionsListCoreDataServiceWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsListCoreDataServiceWorker.swift; sourceTree = "<group>"; };
 		3BFC6FD428C65F6900B65343 /* AddTransactionCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTransactionCoordinator.swift; sourceTree = "<group>"; };
-		3BFC6FF728C6618F00B65343 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3BFC6FF928C6618F00B65343 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B41245928C732FF0061F7D7 /* UI Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3B41245A28C7336F0061F7D7 /* TextFieldValidatable.swift */,
+			);
+			path = "UI Classes";
+			sourceTree = "<group>";
+		};
 		3BFC6F4328C65E8D00B65343 = {
 			isa = PBXGroup;
 			children = (
@@ -152,12 +164,13 @@
 				3BFC6F5128C65E8E00B65343 /* SceneDelegate.swift */,
 				3BFC6F5D28C65E8F00B65343 /* Info.plist */,
 				3BFC6FB128C65F6800B65343 /* Transactions.xcdatamodeld */,
-				3BFC6FF528C6618F00B65343 /* Storyboards */,
 				3BFC6FA428C65F6800B65343 /* Assets */,
+				3BFC6F9528C65F6800B65343 /* Base.lproj */,
 				3BFC6FA728C65F6800B65343 /* Coordinator */,
 				3BFC6FB828C65F6800B65343 /* Enum */,
 				3BFC6FBA28C65F6800B65343 /* MVVM */,
 				3BFC6FAB28C65F6800B65343 /* Services */,
+				3BFC6F9628C65F6800B65343 /* Storyboards */,
 				3BFC6F9B28C65F6800B65343 /* Utils */,
 				3BFC6FB328C65F6800B65343 /* Validation Rules */,
 			);
@@ -227,9 +240,26 @@
 			path = TransactionsListViewModelTests;
 			sourceTree = "<group>";
 		};
+		3BFC6F9528C65F6800B65343 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		3BFC6F9628C65F6800B65343 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3BFC6F9728C65F6800B65343 /* LaunchScreen.storyboard */,
+				3BFC6F9928C65F6800B65343 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		3BFC6F9B28C65F6800B65343 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				3B41245928C732FF0061F7D7 /* UI Classes */,
 				3BFC6F9C28C65F6800B65343 /* Extenstions */,
 				3BFC6FA028C65F6800B65343 /* Protocols */,
 				3BFC6FA228C65F6800B65343 /* Factory */,
@@ -243,6 +273,7 @@
 				3BFC6F9D28C65F6800B65343 /* UIView + Extension.swift */,
 				3BFC6F9E28C65F6800B65343 /* UIViewController + Extension.swift */,
 				3BFC6F9F28C65F6800B65343 /* Date + Extension.swift */,
+				3B41245728C719210061F7D7 /* UIWindow + Extension.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -325,9 +356,9 @@
 		3BFC6FB328C65F6800B65343 /* Validation Rules */ = {
 			isa = PBXGroup;
 			children = (
+				3BFC6FB628C65F6800B65343 /* RuleProtocol.swift */,
 				3BFC6FB428C65F6800B65343 /* TransactionMaxAmountRule.swift */,
 				3BFC6FB528C65F6800B65343 /* TransactionDescriptionRule.swift */,
-				3BFC6FB628C65F6800B65343 /* RuleProtocol.swift */,
 				3BFC6FB728C65F6800B65343 /* TransactionMinAmountRule.swift */,
 			);
 			path = "Validation Rules";
@@ -465,15 +496,6 @@
 			path = ChildCoordinator;
 			sourceTree = "<group>";
 		};
-		3BFC6FF528C6618F00B65343 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				3BFC6FF628C6618F00B65343 /* LaunchScreen.storyboard */,
-				3BFC6FF828C6618F00B65343 /* Main.storyboard */,
-			);
-			path = Storyboards;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -555,8 +577,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BFC6FFB28C6618F00B65343 /* Main.storyboard in Resources */,
-				3BFC6FFA28C6618F00B65343 /* LaunchScreen.storyboard in Resources */,
+				3BFC6FD528C65F6900B65343 /* LaunchScreen.storyboard in Resources */,
+				3BFC6FD628C65F6900B65343 /* Main.storyboard in Resources */,
 				3BFC6FDC28C65F6900B65343 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -590,10 +612,12 @@
 				3BFC6FEA28C65F6900B65343 /* TransactionsListViewModel.swift in Sources */,
 				3BFC6F5028C65E8E00B65343 /* AppDelegate.swift in Sources */,
 				3BFC6FF128C65F6900B65343 /* AddTransactionProtocols.swift in Sources */,
+				3B41245B28C7336F0061F7D7 /* TextFieldValidatable.swift in Sources */,
 				3BFC6F5228C65E8E00B65343 /* SceneDelegate.swift in Sources */,
 				3BFC6FE528C65F6900B65343 /* RuleProtocol.swift in Sources */,
 				3BFC6FED28C65F6900B65343 /* TransactionsListProtocols.swift in Sources */,
 				3BFC6FF428C65F6900B65343 /* AddTransactionCoordinator.swift in Sources */,
+				3B41245828C719210061F7D7 /* UIWindow + Extension.swift in Sources */,
 				3BFC6FE128C65F6900B65343 /* LocalDataPersistanceStoreContainer.swift in Sources */,
 				3BFC6FEE28C65F6900B65343 /* TransactionsListCoordinator.swift in Sources */,
 				3BFC6FDE28C65F6900B65343 /* CoordinatorProtocol.swift in Sources */,
@@ -635,18 +659,18 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3BFC6FF628C6618F00B65343 /* LaunchScreen.storyboard */ = {
+		3BFC6F9728C65F6800B65343 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3BFC6FF728C6618F00B65343 /* Base */,
+				3BFC6F9828C65F6800B65343 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		3BFC6FF828C6618F00B65343 /* Main.storyboard */ = {
+		3BFC6F9928C65F6800B65343 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3BFC6FF928C6618F00B65343 /* Base */,
+				3BFC6F9A28C65F6800B65343 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

@@ -22,7 +22,7 @@ class AddTransactionMinValidationTests: XCTestCase {
         
         // Act
         let amountValidatorRule = TransactionMinAmountRule()
-        let output = amountValidatorRule.performValidation(sut)
+        let output = amountValidatorRule.performValidation(sut.description)
         
         // Assert
         XCTAssertFalse(output, "Transaction Amount should be Failed when Zero amount is sent")
@@ -36,7 +36,7 @@ class AddTransactionMinValidationTests: XCTestCase {
         
         // Act
         let amountValidatorRule = TransactionMinAmountRule()
-        let output = amountValidatorRule.performValidation(sut)
+        let output = amountValidatorRule.performValidation(sut.description)
         
         // Assert
         XCTAssertFalse(output, "Transaction Amount should be Failed when Zero amount is sent")
@@ -49,7 +49,7 @@ class AddTransactionMinValidationTests: XCTestCase {
         
         // Act
         let amountValidatorRule = TransactionMinAmountRule()
-        let output = amountValidatorRule.performValidation(sut)
+        let output = amountValidatorRule.performValidation(sut.description)
         
         // Assert
         XCTAssertTrue(output, "Transaction Amount should be Failed when Less Than One Hundred Million amount is sent")

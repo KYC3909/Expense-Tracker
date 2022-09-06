@@ -56,7 +56,7 @@ extension TransactionsListCoreDataServiceWorker: LocalDataStorageServiceWorkerPr
                 // if both ID are matched then remove from Local Storage and Save to Context
                 if object.id == item.id {
                     self.moc.delete(item)
-                    break
+//                    break
                 }
             }
 

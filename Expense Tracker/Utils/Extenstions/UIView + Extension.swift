@@ -56,10 +56,9 @@ extension UIView {
     
     // Drop Shadow like `AppStore`
     private func dropShadowForAppStore(scale: Bool = true) {
-        let shadowColor = UIColor(named: "ShadowColor")
         layer.masksToBounds = false
-        layer.shadowColor = shadowColor?.cgColor ?? UIColor.gray.cgColor
-        layer.shadowOpacity = shadowColor != nil ? 0.7 : 0.3
+        layer.shadowColor = UIColor.gray.cgColor
+        layer.shadowOpacity = 0.2
         layer.shadowOffset = .zero
         layer.cornerRadius = 20
         layer.shadowRadius = 12
@@ -70,12 +69,19 @@ extension UIView {
     // Drop Shadow like `PlayStore`
     private func dropShadowForPlayStore(scale: Bool = true) {
         layer.masksToBounds = false
-        layer.shadowColor = UIColor(named: "ShadowColor")?.cgColor ?? UIColor.gray.cgColor
+        layer.shadowColor = UIColor.lightGray.cgColor
         layer.shadowOpacity = 0.2
         layer.shadowOffset = CGSize(width: 0, height: 1)
         layer.cornerRadius = 8
         layer.shouldRasterize = true
         layer.rasterizationScale = scale ? UIScreen.main.scale : 1
+    }
+    
+    // Apply Corner Radius
+    func applyCornerRadius() {
+        layer.borderColor = UIColor.lightGray.cgColor
+        layer.borderWidth = 0.5
+        layer.cornerRadius = 8
     }
 
 }

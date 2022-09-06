@@ -20,6 +20,7 @@ protocol AddTransactionViewModelProtocol: AnyObject {
     func addSelected(_ type: Int,
                      _ desc: String,
                      _ amount: Int)
+    func dismissSelected(isDismissing: Bool)
 }
 
 

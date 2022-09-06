@@ -22,7 +22,7 @@ class AddTransactionMaxValidationTests: XCTestCase {
         
         // Act
         let amountValidatorRule = TransactionMaxAmountRule()
-        let output = amountValidatorRule.performValidation(sut)
+        let output = amountValidatorRule.performValidation(sut.description)
         
         // Assert
         XCTAssertFalse(output, "Transaction Amount should be Failed when Zero amount is sent")
@@ -35,7 +35,7 @@ class AddTransactionMaxValidationTests: XCTestCase {
         
         // Act
         let amountValidatorRule = TransactionMaxAmountRule("Please provide Less Than 100 Hundred Million Dollar amount")
-        let output = amountValidatorRule.performValidation(sut)
+        let output = amountValidatorRule.performValidation(sut.description)
         
         // Assert
         XCTAssertFalse(output, "Transaction Amount should be Failed when One Hundred Million amount is sent")
@@ -48,7 +48,7 @@ class AddTransactionMaxValidationTests: XCTestCase {
         
         // Act
         let amountValidatorRule = TransactionMaxAmountRule()
-        let output = amountValidatorRule.performValidation(sut)
+        let output = amountValidatorRule.performValidation(sut.description)
         
         // Assert
         XCTAssertTrue(output, "Transaction Amount should be Failed when Less Than One Hundred Million amount is sent")
@@ -61,7 +61,7 @@ class AddTransactionMaxValidationTests: XCTestCase {
         
         // Act
         let amountValidatorRule = TransactionMaxAmountRule()
-        let output = amountValidatorRule.performValidation(sut)
+        let output = amountValidatorRule.performValidation(sut.description)
         
         // Assert
         XCTAssertTrue(output, "Transaction Amount should be Failed when Less Than One Hundred Million amount is sent")

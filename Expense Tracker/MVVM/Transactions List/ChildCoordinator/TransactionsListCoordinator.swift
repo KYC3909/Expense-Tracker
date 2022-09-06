@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import CoreData
 
-final class TransactionsListCoordinator : ChildCoordinator {
+final class TransactionsListCoordinator : ChildCoordinator  {
     weak var parentCoordinator: ParentCoordinator?
     var navigationController: UINavigationController
     
@@ -22,6 +22,8 @@ final class TransactionsListCoordinator : ChildCoordinator {
     }
     
     func configureChildViewController() {
+//        self.navigationController.delegate = self
+
         let transactionsListVC = TransactionsListVC.instantiateFrom(.main)
         let loadPersistanceStoreContainer = PersistanceStoreContainerFactory.create(with: .transactions)
         managedObjectContext = loadPersistanceStoreContainer.viewContext
@@ -37,8 +39,9 @@ final class TransactionsListCoordinator : ChildCoordinator {
         self.navigationController.setViewControllers([transactionsListVC], animated: false)
     }
     
-    func configureAddedTransactionToTransactionsListVC(_ addedTransaction: Transaction) {
-        if let transactionsListVC = self.navigationController.viewControllers.first(where: { $0 is TransactionsListVC } ) as? TransactionsListVC{
+    func configureAddedTransactionToTransactionsListVC(_ addedTransaction: Transaction?) {
+        if let transactionsListVC = self.navigationController.viewControllers.first(where: { $0 is TransactionsListVC } ) as? TransactionsListVC,
+            let addedTransaction = addedTransaction{
             transactionsListVC.viewModel.newTransactionAddedToLocalDatabase(addedTransaction)
         }
         parentCoordinator?.removeChildCoordinator(child: self)

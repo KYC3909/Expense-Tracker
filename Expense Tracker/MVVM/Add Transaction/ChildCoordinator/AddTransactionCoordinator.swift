@@ -23,6 +23,7 @@ final class AddTransactionCoordinator : ChildCoordinator {
     }
     
     func configureChildViewController() {
+        
         let addTransactionVC = AddTransactionsVC.instantiateFrom(.main)
         let viewModel = AddTransactionViewModel(addTransactionVC,
                                                 managedObjectContext,
@@ -31,7 +32,7 @@ final class AddTransactionCoordinator : ChildCoordinator {
         
         addTransactionVC.assignViewModel(viewModel)
 
-        self.navigationController.present(addTransactionVC, animated: true)
+        self.navigationController.viewControllers.first?.present(addTransactionVC, animated: true)
     }
     
     func assignMocAndLocalStorageManager(_ moc: NSManagedObjectContext, _ coreDataManager: TransactionsCoreDataServiceManager) {
@@ -39,18 +40,21 @@ final class AddTransactionCoordinator : ChildCoordinator {
         self.coreDataManager = coreDataManager
     }
     
-    func dismissController(with addedTransaction: Transaction) {
+    func dismissController(with addedTransaction: Transaction?, isDismissing: Bool = false) {
         guard let transactionsListCoordinator = parentCoordinator?.childCoordinator.first(where: { $0 is TransactionsListCoordinator }) as? TransactionsListCoordinator else {
             return
         }
-        
+
         transactionsListCoordinator.configureAddedTransactionToTransactionsListVC(addedTransaction)
         parentCoordinator?.removeChildCoordinator(child: self)
-        self.navigationController.dismiss(animated: true) { [weak self] in
+        if isDismissing {
             transactionsListCoordinator.assignParent()
+        } else {
+            self.navigationController.dismiss(animated: true) { [weak self] in
+                transactionsListCoordinator.assignParent()
+            }
         }
     }
-    
     deinit {
         debugPrint("AddTransactionCoordinator")
     }

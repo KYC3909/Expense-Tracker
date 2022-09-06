@@ -8,6 +8,6 @@
         <attribute name="transactionType" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="Transaction" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="Transaction" positionX="-63" positionY="-18" width="128" height="104"/>
     </elements>
 </model>

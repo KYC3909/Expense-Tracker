@@ -21,16 +21,19 @@ final class TransactionsListVC: UIViewController {
     @IBOutlet private weak var progressView: UIProgressView!
 
     private(set) var viewModel: TransactionsListViewModelProtocol!
+    private var previousDeviceOrientation: UIDeviceOrientation = UIDevice.current.orientation
 
     override func viewDidLoad() { super.viewDidLoad()
-        setupViews()
+        setupViews(); setupOrientation()
     }
-
+    override func viewWillLayoutSubviews() { super.viewWillLayoutSubviews()
+        self.updateLayout()
+    }
     private func setupViews() {
         progressView.setProgress(0, animated: true)
 
         headerContainerView.cardView(.appstore)
-        headerViewWidthConstraint.constant = self.view.frame.width
+        headerViewWidthConstraint.constant = self.tableView.frame.width
         tableView.tableHeaderView = headerView
         
         addContainerView.cardView(.appstore)
@@ -44,6 +47,14 @@ final class TransactionsListVC: UIViewController {
         self.viewModel.fetchTransactionsList()
     }
 
+    private func setupOrientation() {
+        NotificationCenter.default.addObserver(
+                self,
+                selector:  #selector(self.deviceDidRotate),
+                name: UIDevice.orientationDidChangeNotification,
+                object: nil)
+    }
+    
     func assignViewModel(_ viewModel: TransactionsListViewModelProtocol)  {
         self.viewModel = viewModel
     }
@@ -52,6 +63,17 @@ final class TransactionsListVC: UIViewController {
         self.viewModel.addTransactionSelected()
     }
     
+    @objc func deviceDidRotate() {
+        if UIDevice.current.orientation == previousDeviceOrientation { return }
+        previousDeviceOrientation = UIDevice.current.orientation
+        self.updateLayout()
+    }
+    private func updateLayout() {
+        headerViewWidthConstraint.constant = self.tableView.frame.width
+    }
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 }
 
 // MARK: - Private Helper Methods

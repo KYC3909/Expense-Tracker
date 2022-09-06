@@ -7,8 +7,8 @@
 
 import Foundation
 
-protocol RuleProtocol {
-    associatedtype ValueType
+protocol RuleProtocol: ValidationBaseProtocol {
     func errorMessage() -> String
-    func performValidation(_ value: ValueType) -> Bool
+    func performValidation(_ value: String) -> Bool
 }
+

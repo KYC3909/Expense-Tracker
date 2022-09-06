@@ -32,7 +32,7 @@ extension AddTransactionViewModel: AddTransactionViewModelProtocol {
     func increaseAmount(_ value: String) {
         let amount = Int(value) ?? 0
         let maxAmountRuleValidator = TransactionMaxAmountRule()
-        if maxAmountRuleValidator.performValidation(amount + 1) {
+        if maxAmountRuleValidator.performValidation((amount + 1).description) {
             self.view?.transactionAmountUpdated(to: amount + 1)
         }else {
             self.view?.transactionErrorDesc(maxAmountRuleValidator.errorMessage())
@@ -41,7 +41,7 @@ extension AddTransactionViewModel: AddTransactionViewModelProtocol {
     func decreaseAmount(_ value: String) {
         let amount = Int(value) ?? 1
         let minAmountRuleValidator = TransactionMinAmountRule()
-        if minAmountRuleValidator.performValidation(amount - 1) {
+        if minAmountRuleValidator.performValidation((amount - 1).description) {
             self.view?.transactionAmountUpdated(to: amount - 1)
         }else {
             self.view?.transactionErrorDesc(minAmountRuleValidator.errorMessage())
@@ -64,7 +64,7 @@ extension AddTransactionViewModel: AddTransactionViewModelProtocol {
         }
         
         let transactionAmountRuleValidator = TransactionMinAmountRule()
-        guard transactionAmountRuleValidator.performValidation(amount) else {
+        guard transactionAmountRuleValidator.performValidation(amount.description) else {
             self.view?.transactionErrorDesc(transactionAmountRuleValidator.errorMessage())
             return
         }
@@ -83,5 +83,7 @@ extension AddTransactionViewModel: AddTransactionViewModelProtocol {
         self.view?.transactionAddedSuccessful()
         self.addTransactionChildCoordinator?.dismissController(with: transaction)
     }
-
+    func dismissSelected(isDismissing: Bool) {
+        self.addTransactionChildCoordinator?.dismissController(with: nil, isDismissing: isDismissing)
+    }
 }
