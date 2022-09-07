@@ -97,7 +97,10 @@ extension AddTransactionsVC {
                                                  Int(txtFieldAmount.text ?? "") ?? 0)
     }
     @IBAction func btnTapGesture(_ sender: UITapGestureRecognizer) {
-        self.addTransactionViewModel.dismissSelected(isDismissing: false)
+        let position = sender.location(in: self.view)
+        if !self.viewContainer.frame.contains(position) {
+            self.addTransactionViewModel.dismissSelected(isDismissing: false)
+        }
     }
 }
 // MARK: - AddTransactionViewProtocol

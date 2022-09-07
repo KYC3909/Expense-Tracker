@@ -36,6 +36,6 @@ Expense Tracker loads Expenses or Income from Local Data Storage *CoreData*.
 - Whole section will be deleted when only one record is there under the section other than first row
 
 ### App Walkthrough
-| Light Mode | Dark Mode |
-| --- | --- |
-| ![LightMode](https://user-images.githubusercontent.com/7498229/188801813-4a300940-ebd2-46e1-a6e8-53d446c98610.gif) | ![DarkMode](https://user-images.githubusercontent.com/7498229/188802560-626e138b-ada5-4a3f-95d8-4cf91a2a7ddb.gif) |
+| App Walkthrough | 
+| --- |
+| ![app-walkthrough](https://user-images.githubusercontent.com/7498229/188475575-b0861a1e-9f9d-454d-bc5d-2a88542d6925.gif) |

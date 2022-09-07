@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,7 +19,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZT8-3a-82k">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
-                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <color key="backgroundColor" name="SecondarySystemBackground"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TransactionsListCell" rowHeight="112" id="JLy-gr-1oq" customClass="TransactionsListCell" customModule="Expense_Tracker" customModuleProvider="target">
                                         <rect key="frame" x="20" y="49.5" width="374" height="112"/>
@@ -38,7 +39,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <color key="backgroundColor" name="CardBackground"/>
                                             <constraints>
                                                 <constraint firstItem="fbx-T9-J7h" firstAttribute="top" secondItem="wsV-2U-Wiq" secondAttribute="topMargin" id="5Tq-na-l88"/>
                                                 <constraint firstItem="1Pl-eQ-vXo" firstAttribute="top" secondItem="wsV-2U-Wiq" secondAttribute="topMargin" id="AfX-wG-h1Q"/>
@@ -50,7 +51,7 @@
                                                 <constraint firstItem="1Pl-eQ-vXo" firstAttribute="centerY" secondItem="wsV-2U-Wiq" secondAttribute="centerY" id="t0w-De-oBM"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="CardBackground"/>
                                         <connections>
                                             <outlet property="lblAmount" destination="fbx-T9-J7h" id="CDu-1t-a0z"/>
                                             <outlet property="lblTitle" destination="1Pl-eQ-vXo" id="vnh-AM-jUV"/>
@@ -83,7 +84,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <color key="backgroundColor" name="SecondarySystemBackground"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rVh-2V-Cfb" secondAttribute="bottom" constant="20" id="1Wn-y7-opF"/>
                             <constraint firstItem="ZT8-3a-82k" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="A6d-eE-JJp"/>
@@ -274,7 +275,7 @@
                                     </constraints>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" name="CardBackground"/>
                             <constraints>
                                 <constraint firstItem="wjx-hl-VXh" firstAttribute="leading" secondItem="GSN-Ya-PHv" secondAttribute="leading" constant="20" id="7Xp-iQ-mac"/>
                                 <constraint firstItem="wjx-hl-VXh" firstAttribute="trailing" secondItem="GSN-Ya-PHv" secondAttribute="trailing" constant="-20" id="9tx-nd-NOP"/>
@@ -287,7 +288,7 @@
                         </view>
                     </subviews>
                     <viewLayoutGuide key="safeArea" id="dz8-9O-3pd"/>
-                    <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                    <color key="backgroundColor" name="SecondarySystemBackground"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="414" id="1gF-RX-mZf"/>
                         <constraint firstItem="BqU-Qh-gWz" firstAttribute="centerY" secondItem="Ze6-1F-wsd" secondAttribute="centerY" id="HIG-PA-biE"/>
@@ -303,11 +304,11 @@
         <scene sceneID="nHy-1M-8CH">
             <objects>
                 <viewController storyboardIdentifier="AddTransactionsVC" id="D8r-jn-zhJ" customClass="AddTransactionsVC" customModule="Expense_Tracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" alpha="0.97999999999999998" contentMode="scaleToFill" id="FQ3-xX-n0i">
+                    <view key="view" contentMode="scaleToFill" id="FQ3-xX-n0i">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k7Q-Bt-UCx">
+                            <visualEffectView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k7Q-Bt-UCx">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zu6-2T-sYl">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -356,7 +357,7 @@
                                                                                 <buttonConfiguration key="configuration" style="plain" image="arrow_drop_down_down" title=""/>
                                                                             </button>
                                                                         </subviews>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="trailing" secondItem="jQQ-WW-coa" secondAttribute="trailing" constant="8" id="3JO-WR-XLE"/>
                                                                             <constraint firstAttribute="height" constant="44" id="Dse-HU-OtR"/>
@@ -396,7 +397,11 @@
                                                         <rect key="frame" x="0.0" y="142" width="310" height="132"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Transaction Description" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cjx-VS-n4T">
-                                                                <rect key="frame" x="20" y="20" width="270" height="32"/>
+                                                                <rect key="frame" x="20" y="14" width="270" height="44"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="44" id="EMA-0Q-EWG"/>
+                                                                </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" smartQuotesType="no" textContentType="name"/>
                                                             </textField>
@@ -441,11 +446,12 @@
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Transaction Amount" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="T6N-KK-1w8" customClass="TextControl" customModule="Expense_Tracker" customModuleProvider="target">
                                                                         <rect key="frame" x="24" y="0.0" width="202" height="44"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartQuotesType="no" textContentType="tel"/>
                                                                     </textField>
                                                                 </subviews>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstItem="T6N-KK-1w8" firstAttribute="leading" secondItem="ZR6-S3-S8w" secondAttribute="trailing" id="19u-qX-yBh"/>
                                                                     <constraint firstAttribute="bottom" secondItem="ZR6-S3-S8w" secondAttribute="bottom" id="3ik-Dc-Gnc"/>
@@ -464,8 +470,8 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="cjx-VS-n4T" secondAttribute="trailing" constant="20" id="KUT-iz-KWz"/>
-                                                            <constraint firstItem="O1R-6C-PAT" firstAttribute="top" secondItem="cjx-VS-n4T" secondAttribute="bottom" constant="16" id="dx2-oh-Kiw"/>
-                                                            <constraint firstItem="cjx-VS-n4T" firstAttribute="top" secondItem="ZDd-GP-Uny" secondAttribute="top" constant="20" id="e9Z-O2-lDa"/>
+                                                            <constraint firstItem="O1R-6C-PAT" firstAttribute="top" secondItem="cjx-VS-n4T" secondAttribute="bottom" constant="10" id="dx2-oh-Kiw"/>
+                                                            <constraint firstItem="cjx-VS-n4T" firstAttribute="top" secondItem="ZDd-GP-Uny" secondAttribute="top" constant="14" id="e9Z-O2-lDa"/>
                                                             <constraint firstItem="O1R-6C-PAT" firstAttribute="leading" secondItem="ZDd-GP-Uny" secondAttribute="leading" constant="20" id="f6o-Uy-jU1"/>
                                                             <constraint firstAttribute="bottom" secondItem="O1R-6C-PAT" secondAttribute="bottom" constant="20" id="ffl-uo-JhB"/>
                                                             <constraint firstAttribute="trailing" secondItem="O1R-6C-PAT" secondAttribute="trailing" constant="20" id="pe2-7C-UhP"/>
@@ -508,7 +514,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="CardBackground"/>
                                 <constraints>
                                     <constraint firstItem="1jV-2G-M1S" firstAttribute="top" secondItem="wWj-ae-45s" secondAttribute="bottom" constant="40" id="ITp-PN-ZS2"/>
                                     <constraint firstAttribute="trailing" secondItem="1jV-2G-M1S" secondAttribute="trailing" constant="20" id="bdL-Hl-WAd"/>
@@ -521,7 +527,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fsO-0o-sfS"/>
-                        <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                        <color key="backgroundColor" name="SecondarySystemBackground"/>
                         <constraints>
                             <constraint firstItem="dAv-31-wFj" firstAttribute="top" secondItem="fsO-0o-sfS" secondAttribute="top" constant="44" id="W3R-HD-jzN"/>
                             <constraint firstItem="k7Q-Bt-UCx" firstAttribute="trailing" secondItem="FQ3-xX-n0i" secondAttribute="trailing" id="bBL-FI-nRI"/>
@@ -531,6 +537,9 @@
                             <constraint firstAttribute="bottom" secondItem="k7Q-Bt-UCx" secondAttribute="bottom" id="ryc-l0-beF"/>
                             <constraint firstItem="fsO-0o-sfS" firstAttribute="trailing" secondItem="dAv-31-wFj" secondAttribute="trailing" constant="32" id="zgj-Ie-8Ya"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="tg6-cy-bit" appends="YES" id="RaC-W4-XpU"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="addButtonContainerView" destination="7I3-XZ-bKW" id="igc-aP-IjF"/>
@@ -580,14 +589,14 @@
         <image name="add" width="36" height="36"/>
         <image name="arrow_drop_down_down" width="36" height="36"/>
         <image name="arrow_drop_down_up" width="36" height="36"/>
+        <namedColor name="CardBackground">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondarySystemBackground">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="secondarySystemFillColor">
-            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="separatorColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
